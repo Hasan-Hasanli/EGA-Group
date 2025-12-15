@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Məhsullar - Ega Group</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo.png" alt="Ega Group Logo"></a>
+                </div>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Ana Səhifə</a></li>
+                    <li><a href="about.html">Haqqımızda</a></li>
+                    <li><a href="products.html" class="active">Məhsullar</a></li>
+                    <li><a href="contact.html">Əlaqə</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Məhsullarımız</h2>
+                <div class="divider"></div>
+            </div>
+            
+            <!-- Category Filter -->
+            <div class="category-filter">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-category="all">Bütün Məhsullar</button>
+                    <button class="filter-btn" data-category="omega">Omega-3</button>
+                    <button class="filter-btn" data-category="antihistamin">Antihistaminlər</button>
+                    <button class="filter-btn" data-category="vitamin">Vitaminlər</button>
+                    <button class="filter-btn" data-category="solunum">Tənəffüs Yolları</button>
+                    <button class="filter-btn" data-category="metabolik">Metabolik</button>
+                    <button class="filter-btn" data-category="agri">Ağrı Kəsicilər</button>
+                    <button class="filter-btn" data-category="sindirim">Həzm Sistemi</button>
+                </div>
+            </div>
+            
+            <div class="search-container">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Məhsul adı ilə axtar...">
+            </div>
+            
+            <!-- Products Grid -->
+            <div class="products-container">
+                <!-- Products will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Hakkımızda</h3>
+                    <p>Doğal çözümler ve güvenilir ilaçlarla sağlıklı yarınlara yelken açıyoruz.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Sürətli Keçidlər</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Ana Səhifə</a></li>
+                        <li><a href="about.html">Haqqımızda</a></li>
+                        <li><a href="products.html">Məhsullar</a></li>
+                        <li><a href="contact.html">Əlaqə</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>İletişim</h3>
+                    <p><i class="fas fa-phone"></i> +994 51 815 68 45</p>
+                    <p><i class="fas fa-envelope"></i> office@ega-group.az</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Bakı, Azərbaycan</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Bülletenimizə Abunə Olun</h3>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="E-poçt ünvanınız" required>
+                        <button type="submit" class="cta-button">Göndər</button>
+                    </form>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ega Group. Bütün hüquqlar qorunur.</p>
+                <div class="footer-legal">
+                    <a href="#">Məxfilik Siyasəti</a>
+                    <a href="#">İstifadə Qaydaları</a>
+                    <a href="#">Kukilər Siyasəti</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Modal -->
+    <div id="productModal" class="product-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close close-modal">&times;</button>
+            <div class="modal-left">
+                <div class="modal-left-inner">
+                    <img id="modalImage" src="images/logo.png" alt="Məhsul Şəkli" class="modal-product-image">
+                </div>
+            </div>
+            <div class="modal-right">
+                <div class="modal-header">
+                    <h2 id="modalName" class="modal-title">Məhsul adı</h2>
+                    <span id="modalCategory" class="modal-category">Kateqoriya</span>
+                </div>
+                <div class="modal-body">
+                    <div class="product-detail-section">
+                        <h4>Təsvir</h4>
+                        <p id="modalDescription">Məhsul təsviri</p>
+                    </div>
+                    <div class="product-detail-section">
+                        <h4>Tərkib</h4>
+                        <p id="modalIngredients"></p>
+                    </div>
+                    <div class="product-detail-section">
+                        <h4>Göstərişlər</h4>
+                        <p id="modalIndications"></p>
+                    </div>
+                    <div class="product-detail-section">
+                        <h4>İstifadə qaydası</h4>
+                        <p id="modalUsage"></p>
+                    </div>
+                    <div class="product-detail-section">
+                        <h4>Buraxılış forması</h4>
+                        <p id="modalForm"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/products.js"></script>
+    <!-- ================================================================ -->
+<!-- BU HİSSƏNİ products.html FAYLINA ƏLAVƏ EDİN -->
+<!-- ================================================================ -->
+<div class="container">
+    <div class="search-container">
+        <i class="fas fa-search"></i>
+        <input type="text" id="searchInput" placeholder="Məhsul adı ilə axtar...">
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+Kart Boyutları:
+Toplam Yükseklik: 380px
+Genişlik: Otomatik (grid'e göre ayarlanıyor, yaklaşık 1/4 oranında)
+Kenar Boşlukları (Padding): 0
+Kenarlık (Border): 1px solid rgba(0, 0, 0, 0.05)
+Resim Bölümü:
+Yükseklik: 200px
+Yatay/Dikey Hizalama: Merkezde
+İç Boşluk (Padding): 15px
+Arkaplan Rengi: #f8f9fa
+İçerik Bölümü:
+Toplam Yükseklik: ~180px (Kalan alan)
+İç Boşluk (Padding): 15px
+Başlık (Ürün Adı): 2 satırla sınırlı
+Kategori Yazısı: 14px, yeşil renk
+Alt Kısım Boşluğu: 10px
+Butonlar:
+"Ətraflı" Butonu: 40px yükseklik
+Sepet İkonu: 40x40px yuvarlak buton
